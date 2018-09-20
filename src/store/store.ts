@@ -24,7 +24,6 @@ class Store{
             console.log(this.born + 'born');
         }
 
-       
     } 
 
     @action sendUser (){
