@@ -1,5 +1,7 @@
 
-import firebase from 'firebase'
+import * as firebase from 'firebase'
+// Required for side-effects
+require("firebase/firestore");
 
 const config = {
     apiKey: "AIzaSyBeCxe5RUXEogsI_Zqd6igbmQvuJazYCe0",
@@ -11,7 +13,6 @@ const config = {
   };
   
 firebase.initializeApp(config);
-
   
 const db = firebase.firestore();
 

@@ -1,18 +1,22 @@
 import * as React from 'react';
 
 import './Root.scss';
-import { Header } from '../../components/Header/Header';
+import { observer } from 'mobx-react';
+import { store } from '../../store/store';
+import {Home} from '../Home/Home'
 
-
-export class Root extends React.Component {
+@observer export class Root extends React.Component {
     render(){
         return <div>  
-            <Header title="React Seed" 
-                text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ducimus similique incidunt, nostrum placeat, ipsa mollitia, perspiciatis eveniet sed doloremque itaque. Dolorum deserunt maiores vitae molestiae sint iste sed deleniti?"
-                img="./assets/img/logo.png"/>
+        <Home />
+{
+    store.create('santi','ortiz',1998)
+}}
         </div>
     }
 }
+
+
 
 
 
